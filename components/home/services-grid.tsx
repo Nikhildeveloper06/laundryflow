@@ -25,7 +25,7 @@ export function ServicesGrid() {
 
   return (
     <section className="py-24" id="services">
-      <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
+      <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
         {/* Header row */}
         <p className="text-sm font-medium">
           <span className="text-primary">/</span> Services We Offer
@@ -124,7 +124,7 @@ export function ServicesGrid() {
       </div>
 
       {/* Scroll progress bar */}
-      <div className="mx-auto mt-6 max-w-[1600px] px-6 lg:px-12">
+      <div className="mx-auto mt-6 max-w-[1600px] px-6 sm:px-10 lg:px-20">
         <div className="relative mx-auto h-[3px] w-full max-w-xl overflow-hidden rounded-full bg-border">
           <div
             className="absolute left-0 top-0 h-full rounded-full bg-foreground transition-transform duration-150"
