@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, WashingMachine } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/shared/theme-toggle";
 import { siteConfig } from "@/config/site";
 
 export function Navbar() {
@@ -33,17 +32,23 @@ export function Navbar() {
         </div>
 
         <div className="hidden items-center gap-2 md:flex">
-          <ThemeToggle />
-          <Button variant="ghost" nativeButton={false} render={<Link href="/login" />} nativeButton={false}>
+          <Button
+            variant="ghost"
+            nativeButton={false}
+            render={<Link href="/login" />}
+          >
             Log in
           </Button>
-          <Button className="rounded-full" nativeButton={false} render={<Link href="/book" />} nativeButton={false}>
+          <Button
+            className="rounded-full"
+            nativeButton={false}
+            render={<Link href="/book" />}
+          >
             Book Pickup
           </Button>
         </div>
 
-        <div className="flex items-center gap-1 md:hidden">
-          <ThemeToggle />
+        <div className="flex items-center md:hidden">
           <Button
             variant="ghost"
             size="icon"
@@ -72,13 +77,15 @@ export function Navbar() {
               <Button
                 variant="outline"
                 className="flex-1"
-                nativeButton={false} render={<Link href="/login" onClick={() => setOpen(false)} />}
+                nativeButton={false}
+                render={<Link href="/login" onClick={() => setOpen(false)} />}
               >
                 Log in
               </Button>
               <Button
                 className="flex-1 rounded-full"
-                nativeButton={false} render={<Link href="/book" onClick={() => setOpen(false)} />}
+                nativeButton={false}
+                render={<Link href="/book" onClick={() => setOpen(false)} />}
               >
                 Book Pickup
               </Button>
