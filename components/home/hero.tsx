@@ -52,11 +52,11 @@ export function Hero() {
             initial="hidden"
             animate="visible"
             custom={1}
-            className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
+            className="mt-6 text-[2.75rem] font-semibold leading-[1.05] sm:text-6xl lg:text-[4.25rem]"
           >
             Laundry day,
             <br />
-            <span className="text-primary">off your plate.</span>
+            <span className="italic text-primary">off your plate.</span>
           </motion.h1>
 
           <motion.p

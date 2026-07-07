@@ -147,3 +147,16 @@
     @apply font-heading;
   }
 }
+
+@layer base {
+  body {
+    font-feature-settings: "cv11", "ss01";
+  }
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+}
