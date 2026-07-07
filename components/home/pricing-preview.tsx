@@ -79,7 +79,7 @@ export function PricingPreview() {
                 <h3 className="mt-1 text-xl font-semibold">{plan.name}</h3>
 
                 <p className="mt-5">
-                  <span className="font-heading text-5xl font-semibold tabular-nums">
+                  <span className="font-body text-5xl font-bold tracking-tight tabular-nums">
                     {plan.price}
                   </span>
                   <span className="text-muted-foreground">{plan.unit}</span>
