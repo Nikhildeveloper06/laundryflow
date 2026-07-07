@@ -4,6 +4,7 @@ import { ExperienceShowcase } from "@/components/home/experience-showcase";
 import { ServicesGrid } from "@/components/home/services-grid";
 import { HowItWorks } from "@/components/home/how-it-works";
 import { PricingPreview } from "@/components/home/pricing-preview";
+import { ReviewsMarquee } from "@/components/home/reviews-marquee";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <ServicesGrid />
       <HowItWorks />
       <PricingPreview />
+      <ReviewsMarquee />
     </>
   );
 }
