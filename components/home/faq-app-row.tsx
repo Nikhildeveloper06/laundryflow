@@ -83,9 +83,6 @@ function AppColumn() {
         className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,oklch(0.9_0.08_85_/_0.4),transparent_60%)]"
       />
       <div className="relative">
-        <p className="text-sm font-medium text-background/80">
-          <span className="text-background">/</span> Get the App
-        </p>
         <h2 className="mt-3 text-3xl font-semibold leading-[1.12] text-background sm:text-4xl">
           Laundry in your pocket,
           <br />
