@@ -1,33 +1,13 @@
-import { Sparkles } from "lucide-react";
-
-const items = [
-  "Free pickup & delivery",
-  "24-hour turnaround",
-  "Eco-friendly cleaning",
-  "Live order tracking",
-  "48-point quality check",
-  "Trusted by 2,000+ customers",
-];
-
 export function TickerBanner() {
   return (
-    <div className="group flex overflow-hidden bg-foreground py-3 text-background">
-      {[0, 1].map((copy) => (
-        <div
-          key={copy}
-          aria-hidden={copy === 1}
-          className="flex shrink-0 animate-marquee items-center group-hover:[animation-play-state:paused]"
-        >
-          {items.map((item) => (
-            <span key={item} className="flex items-center">
-              <span className="whitespace-nowrap px-6 text-sm font-medium tracking-wide">
-                {item}
-              </span>
-              <Sparkles className="size-3.5 shrink-0 text-primary" />
-            </span>
-          ))}
-        </div>
-      ))}
+    <div
+      className="flex h-24 w-full flex-col items-center justify-center gap-1 border-y-2 border-dashed border-border bg-muted/50 text-muted-foreground sm:h-28"
+      title="Full-width banner image goes here"
+    >
+      <p className="text-sm font-semibold">1920×120 — full-width banner</p>
+      <p className="text-xs opacity-70">
+        Promo strip / offer banner image goes here
+      </p>
     </div>
   );
 }
