@@ -111,14 +111,14 @@ export function HowItWorks() {
           </div>
 
           {/* Right: scrolling step visuals */}
-          <div className="flex flex-col gap-24 py-16 lg:gap-0 lg:py-0 lg:pb-[20vh]">
+          <div className="flex flex-col gap-24 py-16 lg:gap-0 lg:py-[10vh]">
             {steps.map((s, i) => (
               <motion.div
                 key={s.number}
                 id={`step-visual-${i}`}
                 onViewportEnter={() => setActive(i)}
                 viewport={{ amount: 0.5 }}
-                className="flex items-center lg:min-h-dvh"
+                className={"flex items-center " + (i === 0 || i === steps.length - 1 ? "lg:min-h-[80vh]" : "lg:min-h-dvh")}
               >
                 <motion.div
                   initial={{ opacity: 0, scale: 0.94, rotate: i % 2 === 0 ? 1.5 : -1.5 }}
