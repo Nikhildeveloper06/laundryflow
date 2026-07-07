@@ -80,7 +80,7 @@ export function FinalCta() {
             <ArrowRight className="ml-1 size-4 transition-transform group-hover:translate-x-1" />
           </Button>
           
-            href={siteConfig.contact.phoneHref}
+            <a href={siteConfig.contact.phoneHref}
             className="flex items-center gap-2 rounded-full border border-primary-foreground/30 px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
           >
             <Phone className="size-4" />
