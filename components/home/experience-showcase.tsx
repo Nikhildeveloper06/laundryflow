@@ -20,7 +20,7 @@ const cards = [
 
 export function ExperienceShowcase() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-24 sm:px-6">
+    <section className="w-full px-6 py-24 lg:px-12">
       <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.2fr_1fr] lg:gap-10">
         {/* Left: heading + copy + CTA */}
         <motion.div
