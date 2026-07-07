@@ -3,7 +3,7 @@ export type ServiceItem = {
   title: string;
   description: string;
   priceFrom: string;
-  imageSize: string;
+  image: string;
 };
 
 export const services: ServiceItem[] = [
@@ -12,42 +12,42 @@ export const services: ServiceItem[] = [
     title: "Wash & Fold",
     description: "Everyday laundry washed, dried and folded with care.",
     priceFrom: "₹99/kg",
-    imageSize: "600×400",
+    image: "/services/l1.jpeg",
   },
   {
     slug: "dry-cleaning",
     title: "Dry Cleaning",
     description: "Suits, sarees and delicates treated by experts.",
     priceFrom: "₹199/item",
-    imageSize: "600×400",
+    image: "/services/l2.jpeg",
   },
   {
     slug: "ironing",
     title: "Steam Ironing",
     description: "Crisp, wrinkle-free clothes ready to wear.",
     priceFrom: "₹15/item",
-    imageSize: "600×400",
+    image: "/services/l3.jpeg",
   },
   {
     slug: "shoe-cleaning",
     title: "Shoe Cleaning",
     description: "Sneakers and leather restored to like-new.",
     priceFrom: "₹349/pair",
-    imageSize: "600×400",
+    image: "/services/l4.jpeg",
   },
   {
     slug: "curtain-cleaning",
     title: "Curtains & Drapes",
     description: "Deep cleaning for curtains, sofa covers and drapes.",
     priceFrom: "₹499",
-    imageSize: "600×400",
+    image: "/services/l5.jpeg",
   },
   {
     slug: "blanket-cleaning",
     title: "Blankets & Bedding",
     description: "Quilts, blankets and bedsheets, fresh and sanitized.",
     priceFrom: "₹299",
-    imageSize: "600×400",
+    image: "/services/l6.jpeg",
   },
 ];
 

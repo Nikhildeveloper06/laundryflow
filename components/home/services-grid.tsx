@@ -2,10 +2,10 @@
 
 import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight, ChevronRight } from "lucide-react";
 import { services } from "@/constants/services";
-import { ImagePlaceholder } from "@/components/shared/image-placeholder";
 
 export function ServicesGrid() {
   const railRef = useRef<HTMLDivElement>(null);
@@ -26,17 +26,16 @@ export function ServicesGrid() {
   return (
     <section className="py-16" id="services">
       <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
-        {/* Header row */}
         <p className="text-sm font-medium">
           <span className="text-primary">/</span> Services We Offer
         </p>
 
         <div className="mt-6 grid items-end gap-10 lg:grid-cols-[1.2fr_1fr]">
           <motion.h2
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
             className="text-5xl font-semibold leading-[1.08] sm:text-6xl lg:text-7xl"
           >
             Premium care,
@@ -45,10 +44,10 @@ export function ServicesGrid() {
           </motion.h2>
 
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ delay: 0.15, duration: 0.6, ease: "easeOut" }}
+            transition={{ delay: 0.15, duration: 0.7, ease: "easeOut" }}
             className="lg:pb-2"
           >
             <p className="max-w-md text-muted-foreground">
@@ -82,31 +81,29 @@ export function ServicesGrid() {
         {services.map((service, i) => (
           <motion.div
             key={service.slug}
-            initial={{ opacity: 0, y: 32 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-60px" }}
-            transition={{ delay: (i % 4) * 0.08, duration: 0.5, ease: "easeOut" }}
+            transition={{ delay: (i % 4) * 0.08, duration: 0.6, ease: "easeOut" }}
             className="snap-start"
           >
             <Link
               href={"/services/" + service.slug}
               className="group relative block h-[420px] w-[280px] shrink-0 overflow-hidden rounded-3xl sm:w-[300px]"
             >
-              {/* Card image */}
-              <ImagePlaceholder
-                size="600×840"
-                label={service.title + " — tall service photo"}
-                className="absolute inset-0 size-full rounded-none border-0 transition-transform duration-500 group-hover:scale-105"
+              <Image
+                src={service.image}
+                alt={service.title}
+                fill
+                sizes="(max-width: 640px) 280px, 300px"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              {/* Dark gradient for label readability */}
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent" />
 
-              {/* Label bottom-left */}
               <p className="absolute bottom-6 left-6 max-w-[60%] text-lg font-semibold leading-snug text-background">
                 {service.title}
               </p>
 
-              {/* Notched arrow button bottom-right */}
               <span className="absolute -bottom-1 -right-1 flex items-center justify-center rounded-tl-3xl bg-background p-2">
                 <span
                   className={`flex size-12 items-center justify-center rounded-full transition-all duration-300 group-hover:scale-110 ${
