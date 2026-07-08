@@ -52,7 +52,7 @@ function StatItem({ value, label }: { value: string; label: string }) {
 
 export function StatsBand() {
   return (
-    <section className="bg-primary py-8 sm:py-10">
+    <section className="bg-primary py-6 sm:py-8">
       {/* Mobile: swipeable rail (~2.2 visible) */}
       <div className="flex gap-6 overflow-x-auto px-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:hidden">
         {stats.map((stat) => (

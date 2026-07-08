@@ -37,11 +37,11 @@ export function HowItWorks() {
       <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
         <div className="grid lg:grid-cols-2 lg:gap-16">
           {/* Left: sticky step timeline */}
-          <div className="pt-16 lg:sticky lg:top-0 lg:flex lg:h-dvh lg:flex-col lg:justify-center lg:pt-0">
-            <p className="text-sm font-medium">
+          <div className="pt-16 text-center lg:sticky lg:top-0 lg:flex lg:h-dvh lg:flex-col lg:justify-center lg:pt-0 lg:text-left">
+            <p className="text-sm font-medium text-center lg:text-left">
               <span className="text-primary">/</span> How It Works
             </p>
-            <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-semibold sm:text-4xl text-center lg:text-left">
               Four steps to <span className="italic text-primary">fresh</span>
             </h2>
 

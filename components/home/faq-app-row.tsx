@@ -84,7 +84,7 @@ function AppColumn() {
 
 export function FaqAppRow() {
   return (
-    <section className="py-16" id="faq">
+    <section className="py-12 sm:py-16" id="faq">
       <div className="mx-auto grid max-w-[1600px] items-stretch gap-8 px-6 sm:px-10 lg:h-[620px] lg:grid-cols-2 lg:px-20">
         <FaqColumn />
         <AppColumn />

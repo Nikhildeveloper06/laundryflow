@@ -85,14 +85,14 @@ export function PricingPreview() {
   };
 
   return (
-    <section className="py-16" id="pricing">
+    <section className="py-12 sm:py-16" id="pricing">
       <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
-        <p className="text-sm font-medium">
+        <p className="text-sm font-medium text-center lg:text-left">
           <span className="text-primary">/</span> Pricing
         </p>
 
-        <div className="mt-6 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
-          <h2 className="text-4xl font-semibold leading-[1.1] sm:text-5xl">
+        <div className="mt-6 flex flex-col items-center justify-between gap-8 text-center lg:flex-row lg:items-end lg:text-left">
+          <h2 className="text-4xl font-semibold leading-[1.1] sm:text-5xl text-center lg:text-left">
             Honest pricing,
             <br />
             <span className="italic text-primary">no surprises.</span>

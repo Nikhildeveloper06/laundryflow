@@ -24,13 +24,13 @@ export function ServicesGrid() {
   }, []);
 
   return (
-    <section className="py-16" id="services">
+    <section className="py-12 sm:py-16" id="services">
       <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
-        <p className="text-sm font-medium">
+        <p className="text-sm font-medium text-center lg:text-left">
           <span className="text-primary">/</span> Services We Offer
         </p>
 
-        <div className="mt-6 grid items-end gap-10 md:grid-cols-[1.2fr_1fr]">
+        <div className="mt-6 grid items-end gap-10 text-center lg:grid-cols-[1.2fr_1fr] lg:text-left">
           <motion.h2
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -55,7 +55,7 @@ export function ServicesGrid() {
               covers it all. Expertly cleaned, quality checked, delivered
               fresh.
             </p>
-            <div className="mt-6 flex flex-wrap items-center gap-6">
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-6 lg:justify-start">
               <Link
                 href="/services"
                 className="flex items-center gap-1 text-sm font-semibold text-primary transition-opacity hover:opacity-70"
@@ -76,7 +76,7 @@ export function ServicesGrid() {
       {/* Horizontal card rail */}
       <div
         ref={railRef}
-        className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto px-6 pb-4 scroll-pl-6 sm:px-10 sm:scroll-pl-10 lg:px-20 lg:scroll-pl-20 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="mt-6 flex snap-x snap-mandatory gap-5 overflow-x-auto px-6 pb-4 scroll-pl-6 sm:px-10 sm:scroll-pl-10 lg:px-20 lg:scroll-pl-20 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {services.map((service, i) => (
           <motion.div
