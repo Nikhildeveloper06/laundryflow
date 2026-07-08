@@ -1,14 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
 import { faqs } from "@/constants/faqs";
 
-
 function FaqColumn() {
-  // fixed-height column, internal scroll if answers overflow
   const [open, setOpen] = useState<number | null>(0);
 
   return (
@@ -72,13 +70,13 @@ function FaqColumn() {
 
 function AppColumn() {
   return (
-    <div className="relative h-full overflow-hidden rounded-[2.5rem]">
+    <div className="relative hidden h-72 overflow-hidden rounded-[2.5rem] sm:h-96 md:h-full lg:block">
       <Image
         src="/app-mockup.jpeg"
         alt="LaundryFlow app - coming soon"
         fill
-        sizes="(max-width: 1024px) 100vw, 50vw"
-        className="object-cover"
+        sizes="(max-width: 768px) 100vw, 50vw"
+        className="object-contain md:object-cover"
       />
     </div>
   );
@@ -87,7 +85,7 @@ function AppColumn() {
 export function FaqAppRow() {
   return (
     <section className="py-16" id="faq">
-      <div className="mx-auto grid max-w-[1600px] items-stretch gap-8 px-6 sm:px-10 md:grid-cols-2 lg:h-[620px] lg:px-20">
+      <div className="mx-auto grid max-w-[1600px] items-stretch gap-8 px-6 sm:px-10 lg:h-[620px] lg:grid-cols-2 lg:px-20">
         <FaqColumn />
         <AppColumn />
       </div>

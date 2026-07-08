@@ -35,7 +35,7 @@ const footerColumns = [
 export function Footer() {
   return (
     <footer className="border-t border-border/40 bg-muted/30">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 py-14 sm:px-10 md:grid-cols-4">
         <div className="space-y-3">
           <Link href="/" className="flex items-center gap-2">
             <span className="flex size-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">

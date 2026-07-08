@@ -52,7 +52,7 @@ export function PricingPreview() {
         </div>
 
         {/* Plan cards */}
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6">
           <AnimatePresence mode="popLayout">
             {plans.map((plan, i) => (
               <motion.div

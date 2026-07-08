@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="relative min-h-dvh overflow-hidden pt-28 sm:pt-32">
+    <section className="relative min-h-[65dvh] overflow-hidden pt-20 sm:min-h-[75dvh] sm:pt-24 lg:min-h-dvh lg:pt-32">
       <Image
         src="/hero-image.jpeg"
         alt="Bright laundry room with washing machine and freshly dried clothes"
@@ -20,7 +20,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="font-heading text-5xl font-semibold leading-[1.05] text-foreground sm:text-6xl lg:text-7xl"
+          className="font-heading text-3xl font-semibold leading-[1.1] text-foreground sm:text-5xl lg:text-7xl"
         >
           Fresh clothes. <span className="italic text-primary">Zero effort.</span>
         </motion.h1>
@@ -29,7 +29,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15, duration: 0.7, ease: "easeOut" }}
-          className="mt-4 text-lg font-medium text-foreground/70"
+          className="mt-4 hidden text-lg font-medium text-foreground/70 lg:block"
         >
           Free pickup &amp; delivery · 24h turnaround
         </motion.p>

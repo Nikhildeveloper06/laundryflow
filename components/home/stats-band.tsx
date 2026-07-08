@@ -21,16 +21,15 @@ function CountUp({ value }: { value: string }) {
     const isDecimal = match[1].includes(".");
     const duration = 1400;
     const start = performance.now();
-
     const tick = (now: number) => {
-      const progress = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const current = target * eased;
-      const formatted = isDecimal
-        ? current.toFixed(1)
-        : Math.round(current).toLocaleString("en-IN");
-      setDisplay(formatted + suffix);
-      if (progress < 1) requestAnimationFrame(tick);
+      const p = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      const cur = target * eased;
+      setDisplay(
+        (isDecimal ? cur.toFixed(1) : Math.round(cur).toLocaleString("en-IN")) +
+          suffix
+      );
+      if (p < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
   }, [inView, value]);
@@ -38,27 +37,34 @@ function CountUp({ value }: { value: string }) {
   return <span ref={ref}>{display}</span>;
 }
 
+function StatItem({ value, label }: { value: string; label: string }) {
+  return (
+    <div className="text-center">
+      <p className="font-body text-xl font-bold tabular-nums text-primary-foreground sm:text-2xl">
+        <CountUp value={value} />
+      </p>
+      <p className="mt-0.5 whitespace-nowrap text-xs text-primary-foreground/70 sm:text-sm">
+        {label}
+      </p>
+    </div>
+  );
+}
+
 export function StatsBand() {
   return (
-    <section className="bg-primary">
-      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-7 sm:px-6 lg:grid-cols-4">
-        {stats.map((stat, i) => (
-          <motion.div
-            key={stat.label}
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ delay: i * 0.08, duration: 0.4, ease: "easeOut" }}
-            whileHover={{ y: -3 }}
-            className="cursor-default text-center"
-          >
-            <p className="font-body text-2xl font-bold tabular-nums text-primary-foreground sm:text-3xl">
-              <CountUp value={stat.value} />
-            </p>
-            <p className="mt-0.5 text-xs text-primary-foreground/70 sm:text-sm">
-              {stat.label}
-            </p>
-          </motion.div>
+    <section className="bg-primary py-8 sm:py-10">
+      {/* Mobile: swipeable rail (~2.2 visible) */}
+      <div className="flex gap-6 overflow-x-auto px-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:hidden">
+        {stats.map((stat) => (
+          <div key={stat.label} className="w-[42%] shrink-0">
+            <StatItem value={stat.value} label={stat.label} />
+          </div>
+        ))}
+      </div>
+      {/* Tablet & up: single row grid */}
+      <div className="mx-auto hidden max-w-7xl grid-cols-4 gap-8 lg:gap-12 px-6 sm:grid">
+        {stats.map((stat) => (
+          <StatItem key={stat.label} value={stat.value} label={stat.label} />
         ))}
       </div>
     </section>
