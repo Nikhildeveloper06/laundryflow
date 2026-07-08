@@ -19,7 +19,7 @@ export function CoverageAreas() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section className="py-12 sm:py-16" id="coverage">
+    <section className="py-8 sm:py-12" id="coverage">
       <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
         <div className="grid items-center gap-12 text-center lg:grid-cols-2 lg:text-left">
           {/* Left: copy + chips */}

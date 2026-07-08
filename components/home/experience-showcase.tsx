@@ -39,7 +39,7 @@ export function ExperienceShowcase() {
   const videoRadius = useTransform(scrollYProgress, [0, 1], [48, 24]);
 
   return (
-    <section ref={sectionRef} className="w-full px-6 py-12 sm:px-10 sm:py-16 lg:px-20">
+    <section ref={sectionRef} className="w-full px-6 py-8 sm:px-10 sm:py-12 lg:px-20">
       <div className="grid items-center gap-10 text-center lg:grid-cols-[1fr_1.2fr_1fr] lg:text-left">
         {/* Left: heading + copy + CTA */}
         <div className="flex flex-col items-center lg:items-start">
