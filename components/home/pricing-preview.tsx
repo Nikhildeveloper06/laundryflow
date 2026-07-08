@@ -60,7 +60,7 @@ function PlanCard({
   );
 }
 
-export function PricingPreview() {
+export function PricingPreview({ hideHeader = false }: { hideHeader?: boolean } = {}) {
   const [monthly, setMonthly] = useState(false);
   const plans = monthly ? monthlyPlans : perOrderPlans;
 
