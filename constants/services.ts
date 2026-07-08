@@ -4,6 +4,7 @@ export type ServiceItem = {
   description: string;
   priceFrom: string;
   image: string;
+  features: string[];
 };
 
 export const services: ServiceItem[] = [
@@ -13,6 +14,7 @@ export const services: ServiceItem[] = [
     description: "Everyday laundry washed, dried and folded with care.",
     priceFrom: "₹99/kg",
     image: "/services/l1.jpeg",
+    features: ["Sorted by colour & fabric", "Gentle eco detergents", "Neatly folded & packed"],
   },
   {
     slug: "dry-cleaning",
@@ -20,6 +22,7 @@ export const services: ServiceItem[] = [
     description: "Suits, sarees and delicates treated by experts.",
     priceFrom: "₹199/item",
     image: "/services/l2.jpeg",
+    features: ["Expert stain treatment", "Safe for silk & wool", "Premium garment covers"],
   },
   {
     slug: "ironing",
@@ -27,6 +30,7 @@ export const services: ServiceItem[] = [
     description: "Crisp, wrinkle-free clothes ready to wear.",
     priceFrom: "₹15/item",
     image: "/services/l3.jpeg",
+    features: ["Professional steam press", "Crease-perfect finish", "Hung or folded on request"],
   },
   {
     slug: "shoe-cleaning",
@@ -34,6 +38,7 @@ export const services: ServiceItem[] = [
     description: "Sneakers and leather restored to like-new.",
     priceFrom: "₹349/pair",
     image: "/services/l4.jpeg",
+    features: ["Deep clean & deodorise", "Leather conditioning", "Sole & lace whitening"],
   },
   {
     slug: "curtain-cleaning",
@@ -41,6 +46,7 @@ export const services: ServiceItem[] = [
     description: "Deep cleaning for curtains, sofa covers and drapes.",
     priceFrom: "₹499",
     image: "/services/l5.jpeg",
+    features: ["Dust & allergen removal", "Colour-safe cleaning", "Take-down & re-hang help"],
   },
   {
     slug: "blanket-cleaning",
@@ -48,6 +54,7 @@ export const services: ServiceItem[] = [
     description: "Quilts, blankets and bedsheets, fresh and sanitized.",
     priceFrom: "₹299",
     image: "/services/l6.jpeg",
+    features: ["Anti-bacterial wash", "Fluffed & fresh finish", "Heavy items handled easily"],
   },
 ];
 
