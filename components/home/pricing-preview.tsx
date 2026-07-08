@@ -65,6 +65,16 @@ export function PricingPreview() {
   const plans = monthly ? monthlyPlans : perOrderPlans;
 
   const railRef = useRef<HTMLDivElement>(null);
+
+  // Center the featured plan in the carousel on mount
+  useEffect(() => {
+    const rail = railRef.current;
+    if (!rail) return;
+    const featuredIdx = plans.findIndex((p) => p.featured);
+    if (featuredIdx > 0) {
+      rail.scrollLeft = featuredIdx * rail.clientWidth * 0.72;
+    }
+  }, [plans]);
   const [activeDot, setActiveDot] = useState(0);
 
   useEffect(() => {

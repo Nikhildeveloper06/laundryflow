@@ -128,7 +128,7 @@ export function ReviewsMarquee() {
               </span>
             </div>
 
-            <div className="flex flex-col gap-2 sm:flex-row">
+            <div className="hidden gap-2 sm:flex">
               <button
                 onClick={() => page(-1)}
                 disabled={!canPrev}

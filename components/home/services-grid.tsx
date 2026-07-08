@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -9,18 +9,30 @@ import { services } from "@/constants/services";
 
 export function ServicesGrid() {
   const railRef = useRef<HTMLDivElement>(null);
-  const [progress, setProgress] = useState(0);
+  const barRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const rail = railRef.current;
     if (!rail) return;
-    const onScroll = () => {
+    let raf = 0;
+    const update = () => {
       const max = rail.scrollWidth - rail.clientWidth;
-      setProgress(max > 0 ? rail.scrollLeft / max : 0);
+      const pct = max > 0 ? rail.scrollLeft / max : 0;
+      if (barRef.current) {
+        barRef.current.style.transform = "translateX(" + pct * 150 + "%)";
+      }
+      raf = 0;
     };
-    onScroll();
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(update);
+    };
+    update();
     rail.addEventListener("scroll", onScroll, { passive: true });
-    return () => rail.removeEventListener("scroll", onScroll);
+    return () => {
+      rail.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, []);
 
   return (
@@ -124,11 +136,8 @@ export function ServicesGrid() {
       <div className="mx-auto mt-6 max-w-[1600px] px-6 sm:px-10 lg:px-20">
         <div className="relative mx-auto h-[3px] w-full max-w-xl overflow-hidden rounded-full bg-border">
           <div
-            className="absolute left-0 top-0 h-full rounded-full bg-foreground transition-transform duration-150"
-            style={{
-              width: "40%",
-              transform: "translateX(" + progress * 150 + "%)",
-            }}
+            ref={barRef}
+            className="absolute left-0 top-0 h-full w-[40%] rounded-full bg-foreground will-change-transform"
           />
         </div>
       </div>

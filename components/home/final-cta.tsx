@@ -49,7 +49,7 @@ export function FinalCta() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ delay: 0.24, duration: 0.6, ease: "easeOut" }}
-          className="mt-7 flex flex-wrap items-center justify-center gap-4"
+          className="mt-7 flex items-center justify-center gap-3 sm:gap-4"
         >
           <Button
             size="lg"
@@ -60,7 +60,7 @@ export function FinalCta() {
             Book a Pickup
             <ArrowRight className="ml-1 size-4 transition-transform group-hover:translate-x-1" />
           </Button>
-          <a href={siteConfig.contact.phoneHref} className="flex items-center gap-2 rounded-full border border-primary-foreground/30 px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10">
+          <a href={siteConfig.contact.phoneHref} className="flex shrink-0 items-center gap-2 rounded-full border border-primary-foreground/30 px-4 py-2.5 text-xs font-semibold sm:px-6 sm:text-sm text-primary-foreground transition-colors hover:bg-primary-foreground/10">
             <Phone className="size-4" />
             {siteConfig.contact.phone}
           </a>
