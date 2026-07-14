@@ -6,26 +6,24 @@ const footerColumns = [
   {
     title: "Services",
     links: [
-      { label: "Laundry", href: "/services/laundry" },
-      { label: "Dry Cleaning", href: "/services/dry-cleaning" },
-      { label: "Shoe Cleaning", href: "/services/shoe-cleaning" },
-      { label: "Subscription Plans", href: "/pricing" },
+      { label: "All Services", href: "/services" },
+      { label: "Pricing", href: "/pricing" },
+      { label: "Book a Pickup", href: "/book" },
+      { label: "Track Order", href: "/track" },
     ],
   },
   {
     title: "Company",
     links: [
       { label: "About", href: "/about" },
-      { label: "Careers", href: "/careers" },
-      { label: "Blog", href: "/blog" },
       { label: "Contact", href: "/contact" },
+      { label: "FAQ", href: "/faq" },
+      { label: "Log In", href: "/login" },
     ],
   },
   {
-    title: "Support",
+    title: "Legal",
     links: [
-      { label: "Track Order", href: "/track" },
-      { label: "FAQ", href: "/faq" },
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
     ],
@@ -37,22 +35,16 @@ export function Footer() {
     <footer className="border-t border-border/40 bg-muted/30">
       <div className="mx-auto max-w-7xl px-6 py-14 sm:px-10">
         <div className="flex flex-col gap-10 lg:flex-row lg:justify-between">
-          {/* Brand block */}
           <div className="max-w-sm space-y-3">
             <Link href="/" className="flex items-center gap-2">
               <span className="flex size-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">
                 <WashingMachine className="size-5" />
               </span>
-              <span className="font-heading text-lg font-bold">
-                {siteConfig.name}
-              </span>
+              <span className="font-heading text-lg font-bold">{siteConfig.name}</span>
             </Link>
-            <p className="text-sm text-muted-foreground">
-              {siteConfig.description}
-            </p>
+            <p className="text-sm text-muted-foreground">{siteConfig.description}</p>
           </div>
 
-          {/* Link columns */}
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:gap-16">
             {footerColumns.map((col) => (
               <div key={col.title}>
@@ -60,10 +52,7 @@ export function Footer() {
                 <ul className="space-y-2.5">
                   {col.links.map((link) => (
                     <li key={link.href}>
-                      <Link
-                        href={link.href}
-                        className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                      >
+                      <Link href={link.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                         {link.label}
                       </Link>
                     </li>
