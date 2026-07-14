@@ -10,11 +10,7 @@ export function PriceTable() {
   return (
     <section className="py-14 sm:py-20" id="price-list">
       <div className="mx-auto max-w-4xl px-6 sm:px-10">
-        <div className="text-center">
-          <p className="text-sm font-medium">
-            <span className="text-primary">/</span> Price List
-          </p>
-          <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+        <div className="text-center">          <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
             Transparent per-item rates
           </h2>
           <p className="mt-4 text-muted-foreground">

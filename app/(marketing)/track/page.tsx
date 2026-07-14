@@ -12,11 +12,7 @@ export default function TrackPage() {
   return (
     <>
       <section className="bg-[linear-gradient(180deg,#FFFFFF_0%,#F5F7FF_100%)] pt-16 pb-8 text-center sm:pt-24">
-        <div className="mx-auto max-w-2xl px-6">
-          <p className="text-sm font-medium">
-            <span className="text-primary">/</span> Track Order
-          </p>
-          <h1 className="mt-3 text-4xl font-semibold leading-[1.1] sm:text-5xl">
+        <div className="mx-auto max-w-2xl px-6">          <h1 className="mt-3 text-4xl font-semibold leading-[1.1] sm:text-5xl">
             Follow your laundry, <span className="italic text-primary">live.</span>
           </h1>
           <p className="mt-4 text-muted-foreground">

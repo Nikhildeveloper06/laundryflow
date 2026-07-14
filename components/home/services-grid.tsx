@@ -38,10 +38,6 @@ export function ServicesGrid() {
   return (
     <section className="py-8 sm:py-12" id="services">
       <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
-        <p className="text-sm font-medium text-center lg:text-left">
-          <span className="text-primary">/</span> Services We Offer
-        </p>
-
         <div className="mt-6 grid items-end gap-10 text-center lg:grid-cols-[1.2fr_1fr] lg:text-left">
           <motion.h2
             initial={{ opacity: 0 }}

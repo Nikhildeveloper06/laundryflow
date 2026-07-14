@@ -23,11 +23,7 @@ export function CoverageAreas() {
       <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
         <div className="grid items-center gap-12 text-center lg:grid-cols-2 lg:text-left">
           {/* Left: copy + chips */}
-          <div>
-            <p className="text-sm font-medium text-center lg:text-left">
-              <span className="text-primary">/</span> Coverage
-            </p>
-            <h2 className="mt-3 text-4xl font-semibold leading-[1.1] sm:text-5xl text-center lg:text-left">
+          <div>            <h2 className="mt-3 text-4xl font-semibold leading-[1.1] sm:text-5xl text-center lg:text-left">
               We're probably
               <br />
               <span className="italic text-primary">in your area.</span>

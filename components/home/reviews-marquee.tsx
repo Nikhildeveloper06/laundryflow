@@ -97,11 +97,7 @@ export function ReviewsMarquee() {
     >
       <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
         <div className="flex flex-col items-center justify-between gap-6 text-center lg:flex-row lg:items-center lg:text-left">
-          <div>
-            <p className="text-sm font-medium text-center lg:text-left">
-              <span className="text-primary">/</span> Reviews
-            </p>
-            <h2 className="mt-3 text-4xl font-semibold leading-[1.1] sm:text-5xl text-center lg:text-left">
+          <div>            <h2 className="mt-3 text-4xl font-semibold leading-[1.1] sm:text-5xl text-center lg:text-left">
               Loved across
               <br />
               <span className="italic text-primary">the city.</span>

@@ -49,7 +49,6 @@ export default function AboutPage() {
             <Image src="/steps/l9.jpeg" alt="Our cleaning facility" fill sizes="(max-width: 1024px) 100vw, 50vw" className="scale-[1.03] object-cover" />
           </div>
           <div>
-            <p className="text-sm font-medium"><span className="text-primary">/</span> Our Story</p>
             <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
               Built by people who hate laundry day
             </h2>
@@ -75,7 +74,6 @@ export default function AboutPage() {
       <section className="py-16">
         <div className="mx-auto max-w-6xl px-6 sm:px-10">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-medium"><span className="text-primary">/</span> What We Stand For</p>
             <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">Our values</h2>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

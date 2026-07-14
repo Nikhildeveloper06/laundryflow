@@ -97,10 +97,6 @@ export function PricingPreview({ hideHeader = false }: { hideHeader?: boolean } 
   return (
     <section className="py-8 sm:py-12" id="pricing">
       <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
-        <p className="text-sm font-medium text-center lg:text-left">
-          <span className="text-primary">/</span> Pricing
-        </p>
-
         <div className="mt-6 flex flex-col items-center justify-between gap-8 text-center lg:flex-row lg:items-end lg:text-left">
           <h2 className="text-4xl font-semibold leading-[1.1] sm:text-5xl text-center lg:text-left">
             Honest pricing,

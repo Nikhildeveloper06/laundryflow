@@ -95,11 +95,7 @@ export default function ServicesPage() {
       {/* Services grid — modern interactive cards */}
       <section className="py-14 sm:py-20">
         <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-medium">
-              <span className="text-primary">/</span> What We Offer
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+          <div className="mx-auto max-w-2xl text-center">            <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
               Pick a service, we handle the rest
             </h2>
           </div>

@@ -10,11 +10,7 @@ function FaqColumn() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <div className="lg:h-full lg:overflow-y-auto lg:pr-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-      <p className="text-sm font-medium">
-        <span className="text-primary">/</span> FAQ
-      </p>
-      <h2 className="mt-3 text-3xl font-semibold leading-[1.12] sm:text-4xl">
+    <div className="lg:h-full lg:overflow-y-auto lg:pr-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">      <h2 className="mt-3 text-3xl font-semibold leading-[1.12] sm:text-4xl">
         Questions? <span className="italic text-primary">Answered.</span>
       </h2>
 
